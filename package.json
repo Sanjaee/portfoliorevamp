@@ -10,6 +10,10 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^6.4.2",
+    "@fortawesome/free-solid-svg-icons": "^6.4.2",
+    "@fortawesome/react-fontawesome": "^0.2.0",
+    "@iconify/utils": "^2.1.11",
     "firebase": "^10.5.2",
     "formik": "^2.4.5",
     "framer-motion": "^10.16.4",
@@ -17,7 +21,8 @@
     "react-dom": "^18.2.0",
     "react-hot-toast": "^2.4.1",
     "react-router": "^6.18.0",
-    "react-router-dom": "^6.18.0"
+    "react-router-dom": "^6.18.0",
+    "web-vitals": "^3.5.0"
   },
   "devDependencies": {
     "@types/react": "^18.2.15",

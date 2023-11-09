@@ -1,8 +1,18 @@
 import { useState } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
+import {
+  faHome,
+  faUser,
+  faFolderOpen,
+  faBookmark,
+  faEnvelope,
+} from "@fortawesome/free-solid-svg-icons";
 import "./Navbar.css";
 
 const Navbar = () => {
   const [activeNav, setActiveNav] = useState("#header");
+
   return (
     <nav>
       <div className="nav__name">
@@ -12,55 +22,52 @@ const Navbar = () => {
       <div className="nav__container">
         <div className="nav__menu">
           <a href="#header" onClick={() => setActiveNav("#header")}>
-            <i
+            <FontAwesomeIcon
+              icon={activeNav === "#header" ? faHome : faHome}
               className={
-                activeNav === "#header"
-                  ? "active__nav nav__icon uil uil-estate"
-                  : "nav__icon uil uil-estate"
+                activeNav === "#header" ? "active__nav nav__icon" : "nav__icon"
               }
-            ></i>
+            />
             <span className="nav__link">Home</span>
           </a>
           <a href="#about" onClick={() => setActiveNav("#about")}>
-            <i
+            <FontAwesomeIcon
+              icon={activeNav === "#about" ? faUser : faUser}
               className={
-                activeNav === "#about"
-                  ? "active__nav nav__icon uil uil-user"
-                  : "nav__icon uil uil-user"
+                activeNav === "#about" ? "active__nav nav__icon" : "nav__icon"
               }
-            ></i>
+            />
             <span className="nav__link">About</span>
           </a>
           <a href="#work" onClick={() => setActiveNav("#work")}>
-            <i
+            <FontAwesomeIcon
+              icon={activeNav === "#work" ? faFolderOpen : faFolderOpen}
               className={
-                activeNav === "#work"
-                  ? "active__nav nav__icon uil uil-folder-open"
-                  : "nav__icon uil uil-folder-open"
+                activeNav === "#work" ? "active__nav nav__icon" : "nav__icon"
               }
-            ></i>
+            />
             <span className="nav__link">Work</span>
           </a>
         </div>
         <div className="nav__contact">
           <a href="#services" onClick={() => setActiveNav("#services")}>
-            <i
+            <FontAwesomeIcon
+              icon={activeNav === "#services" ? faBookmark : faBookmark}
               className={
                 activeNav === "#services"
-                  ? "active__nav nav__icon uil uil-bookmark"
-                  : "nav__icon uil uil-bookmark"
+                  ? "active__nav nav__icon"
+                  : "nav__icon"
               }
-            ></i>
+            />
             <span className="nav__link">Service</span>
           </a>
           <a href="#footer" onClick={() => setActiveNav("#footer")}>
-            <i
+            <FontAwesomeIcon
+              icon={activeNav === "#footer" ? faEnvelope : faEnvelope}
               className={
-                activeNav === "#footer"
-                  ? "active__nav nav__icon uil uil-comment-lines"
-                  : "nav__icon uil uil-comment-lines"
+                activeNav === "#footer" ? "active__nav nav__icon" : "nav__icon"
               }
-            ></i>
+            />
             <span className="nav__link">Contact</span>
           </a>
         </div>
